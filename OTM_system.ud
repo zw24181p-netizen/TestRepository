@@ -1,0 +1,40 @@
+@startuml
+left to right direction
+
+actor "Student" as st
+
+rectangle "universul passport" {
+  usecase "履修登録" as PS1
+  usecase "シラバス参照" as PS2
+  usecase "成績照会" as PS3
+  usecase "時間割確認" as PS4
+}
+
+rectangle "el-campus" {
+  usecase "試験" as UC1
+  usecase "コンテンツ閲覧" as UC2
+  usecase "課題提出" as UC3
+  usecase "資料ダウンロード" as UC4
+  
+  usecase "試験作成・管理" as UC5
+  usecase "コンテンツ登録" as UC6
+  usecase "採点・フィードバック" as UC7
+}
+
+actor "Teacher" as tc
+
+st --> PS1
+st --> PS2
+st --> PS3
+st --> PS4
+
+st --> UC1
+st --> UC2
+st --> UC3
+st --> UC4
+
+UC5 <-- tc
+UC6 <-- tc
+UC7 <-- tc
+
+@enduml
