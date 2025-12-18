@@ -1,0 +1,7 @@
+@startuml
+Client -> server : "データを要求"
+server -> "Data base" as DB : "問い合わせ"
+
+DB --> server : "結果"
+server -->Client : "データ"
+@enduml
