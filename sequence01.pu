@@ -1,4 +1,6 @@
 @startuml
+hide footbox
+
 Client -> server : "データを要求"
 server -> "Data base" as DB : "問い合わせ"
 
