@@ -1,0 +1,7 @@
+@startuml
+MainFunction -> "calculate()" : "データを計算する"
+"calculate()" -> "get Input" as DB : "入力データ要求"
+
+DB --> "calculate()" : "入力データ"
+"calculate()" -->MainFunction : "計算結果"
+@enduml
